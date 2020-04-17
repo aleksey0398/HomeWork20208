@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxOriginal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxReplaced = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonReplace = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,13 +45,13 @@
             this.label1.Text = "Приложение заменяет все трехбуквенные слова на символ, код которого равен среднем" +
     "у арифметическому кодов букв, входящих в замененное слово.";
             // 
-            // textBox1
+            // textBoxOriginal
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 34);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 134);
-            this.textBox1.TabIndex = 1;
+            this.textBoxOriginal.Location = new System.Drawing.Point(15, 34);
+            this.textBoxOriginal.Multiline = true;
+            this.textBoxOriginal.Name = "textBoxOriginal";
+            this.textBoxOriginal.Size = new System.Drawing.Size(423, 134);
+            this.textBoxOriginal.TabIndex = 1;
             // 
             // label2
             // 
@@ -62,13 +62,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Текст для замены";
             // 
-            // textBox2
+            // textBoxReplaced
             // 
-            this.textBox2.Location = new System.Drawing.Point(504, 34);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(423, 134);
-            this.textBox2.TabIndex = 1;
+            this.textBoxReplaced.Location = new System.Drawing.Point(504, 34);
+            this.textBoxReplaced.Multiline = true;
+            this.textBoxReplaced.Name = "textBoxReplaced";
+            this.textBoxReplaced.Size = new System.Drawing.Size(423, 134);
+            this.textBoxReplaced.TabIndex = 1;
             // 
             // label3
             // 
@@ -87,6 +87,7 @@
             this.buttonReplace.TabIndex = 3;
             this.buttonReplace.Text = "Заменить текст";
             this.buttonReplace.UseVisualStyleBackColor = true;
+            this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
             // 
             // Form1
             // 
@@ -96,8 +97,8 @@
             this.Controls.Add(this.buttonReplace);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxReplaced);
+            this.Controls.Add(this.textBoxOriginal);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -109,9 +110,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxOriginal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxReplaced;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonReplace;
     }
