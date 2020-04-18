@@ -21,7 +21,7 @@ namespace Programm
 
         private void buttonReplace_Click(object sender, EventArgs e)
         {
-            replaceHelper.textOriginal = textBoxReplaced.Text;
+            replaceHelper.textOriginal = textBoxOriginal.Text;
             textBoxReplaced.Text = replaceHelper.getReplacedText();
         }
     }
